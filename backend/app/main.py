@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes import analyze, health
+from app.routes import health, analyze
 
 app = FastAPI(title="Deepfake Verifier", version="0.1.0")
 
