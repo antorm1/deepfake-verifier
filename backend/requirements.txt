@@ -1,0 +1,10 @@
+
+fastapi
+uvicorn
+python-multipart
+pillow
+opencv-python-headless
+librosa
+numpy
+pydantic
+python-dotenv

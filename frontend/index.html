@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepfake Verifier</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #0b1220; color: #e5e7eb; }
+    .panel { background: #111827; border: 1px solid #1f2937; }
+    .accent { color: #60a5fa; }
+    .btn-primary { background: #2563eb; color: #fff; }
+  </style>
+</head>
+<body class="p-6">
+  <header class="max-w-5xl mx-auto mb-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-semibold">Deepfake Verifier</h1>
+      <p class="text-sm text-gray-400">Detect manipulated images, audio, and video</p>
+    </div>
+    <span class="panel px-3 py-1 rounded-full text-xs text-gray-300">Beta</span>
+  </header>
+  <main class="max-w-5xl mx-auto grid gap-4 md:grid-cols-2">
+    <section class="panel rounded-xl p-5">
+      <h2 class="text-lg font-medium mb-2">Upload media</h2>
+      <form id="analyzeForm" class="space-y-3">
+        <input id="fileInput" type="file" accept="image/*,audio/*,video/*" class="block w-full text-sm text-gray-300" />
+        <button type="submit" class="btn-primary px-4 py-2 rounded">Analyze</button>
+      </form>
+      <div id="status" class="mt-3 text-sm text-gray-400"></div>
+    </section>
+    <section class="panel rounded-xl p-5">
+      <h2 class="text-lg font-medium mb-2">Result</h2>
+      <pre id="result" class="text-sm text-gray-300 whitespace-pre-wrap">No analysis yet.</pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
